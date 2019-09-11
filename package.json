@@ -6,8 +6,7 @@
     "author": "Leonid Logvinov <logvinov.leon@gmail.com>",
     "license": "Apache-2.0",
     "scripts": {
-        "prettier": "yarn prettier:js && yarn prettier:ts",
-        "build": "yarn build:ts && shx rm -rf js && shx cp -r ts/lib/ js",
+        "prettier": "yarn prettier:js",
         "prettier:js": "prettier --write 'js/**/*.js' --config .prettierrc",
         "start:js": "node -r dotenv/config js/index.js"
     },
