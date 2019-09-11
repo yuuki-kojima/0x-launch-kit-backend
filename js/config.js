@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const fs = require('fs');
 const _ = require('lodash');
 const path = require('path');
-const metadataPath = path.join(__dirname, '../../metadata.json');
+const metadataPath = path.join(__dirname, '../metadata.json');
 var EnvVarType;
 (function(EnvVarType) {
     EnvVarType[(EnvVarType['Port'] = 0)] = 'Port';
@@ -19,7 +19,10 @@ var EnvVarType;
 })(EnvVarType || (EnvVarType = {}));
 // Whitelisted token addresses. Set to a '*' instead of an array to allow all tokens.
 exports.WHITELISTED_TOKENS = _.isEmpty(process.env.WHITELIST_ALL_TOKENS)
-    ? ['0x2002d3812f58e35f0ea1ffbf80a75a38c32175fa', '0xd0a1e359811322d97991e03f863a0c30c2cf029c']
+    ? ['0x2002d3812f58e35f0ea1ffbf80a75a38c32175fa',
+       '0xd0a1e359811322d97991e03f863a0c30c2cf029c',
+       '0x84f6261350151dc9cbf5b33c5354fe9a82166e26',
+       '0x0e5b093bfee5021110e1b672bb169ae77503658f']
     : assertEnvVarType('WHITELIST_ALL_TOKENS', process.env.WHITELIST_ALL_TOKENS, EnvVarType.WhitelistAllTokens);
 // Network port to listen on
 exports.HTTP_PORT = _.isEmpty(process.env.HTTP_PORT)
