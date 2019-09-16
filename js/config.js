@@ -25,9 +25,9 @@ exports.WHITELISTED_TOKENS = _.isEmpty(process.env.WHITELIST_ALL_TOKENS)
        '0x0e5b093bfee5021110e1b672bb169ae77503658f']
     : assertEnvVarType('WHITELIST_ALL_TOKENS', process.env.WHITELIST_ALL_TOKENS, EnvVarType.WhitelistAllTokens);
 // Network port to listen on
-exports.HTTP_PORT = _.isEmpty(process.env.HTTP_PORT)
+exports.HTTP_PORT = _.isEmpty(process.env.PORT)
     ? 5000
-    : assertEnvVarType('HTTP_PORT', process.env.HTTP_PORT, EnvVarType.Port);
+    : assertEnvVarType('HTTP_PORT', process.env.PORT, EnvVarType.Port);
 // Default network id to use when not specified
 exports.NETWORK_ID = _.isEmpty(process.env.NETWORK_ID)
     ? 42
