@@ -30,7 +30,7 @@ exports.HTTP_PORT = _.isEmpty(process.env.PORT)
     : assertEnvVarType('HTTP_PORT', process.env.PORT, EnvVarType.Port);
 // Default network id to use when not specified
 exports.NETWORK_ID = _.isEmpty(process.env.NETWORK_ID)
-    ? 42
+    ? 4
     : assertEnvVarType('NETWORK_ID', process.env.NETWORK_ID, EnvVarType.NetworkId);
 // The fee recipient for orders
 exports.FEE_RECIPIENT = _.isEmpty(process.env.FEE_RECIPIENT)
